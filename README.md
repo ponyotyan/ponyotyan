@@ -1,27 +1,35 @@
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Oswald&size=40&pause=1000&color=000000&repeat=false&random=false&width=650&height=65&lines=%D0%A7%D0%B0%D1%82-%D0%B1%D0%BE%D1%82+%D0%B4%D0%BB%D1%8F+%D0%BE%D1%81%D0%BC%D0%BE%D1%82%D1%80%D0%B0+%D1%81%D1%82%D1%80%D0%B0%D1%85%D0%BE%D0%B2%D1%8B%D1%85+%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%BE%D0%B2)](https://git.io/typing-svg)
+<h1 align="center"><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Oswald&size=40&pause=1000&color=000000&random=false&width=650&height=65&lines=%D0%A7%D0%B0%D1%82-%D0%B1%D0%BE%D1%82+%D0%B4%D0%BB%D1%8F+%D0%BE%D1%81%D0%BC%D0%BE%D1%82%D1%80%D0%B0+%D1%81%D1%82%D1%80%D0%B0%D1%85%D0%BE%D0%B2%D1%8B%D1%85+%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%BE%D0%B2" alt="Typing SVG" /></a>
+<h3 align="center">Описание</h3>
 
-### Описание
-Чат-бот, разработанный в рамках кейс-чемпионата от Совкомбанка, предназначен для упрощения процесса осмотра страхуемого имущества клиентами. Благодаря использованию технологий компьютерного зрения, чат-бот позволяет клиенту без специальных экспертных навыков осуществить осмотр имущества и получить оценку его стоимости. Решение включает в себя функции распознавания наличия автомобиля, лобового стекла и читаемого VIN номера на предоставленных фотографиях.
-### Схема сервисов
-![alt text](image-3.png)
-### Содержимое
+<div align="justify">Чат-бот, разработанный в рамках кейс-чемпионата от Совкомбанка, предназначен для упрощения процесса осмотра страхуемого имущества клиентами. Благодаря использованию технологий компьютерного зрения, чат-бот позволяет клиенту без специальных экспертных навыков осуществить осмотр имущества и получить оценку его стоимости. Решение включает в себя функции распознавания наличия автомобиля, лобового стекла и читаемого VIN номера на предоставленных фотографиях.</div>
+<h3 align="center">Схема сервисов</h3>
+<p align="center">
+  <img width="600" height="250" src="image-3.png">
+</p>
+<h3 align="center">Содержимое</h3>
+
+   
 <ol>
-<li>data
+<li> <b> data</b> 
 <ul>
 <li>databases.py</li>
 <li>logo.jpg</li>
 <li>own_token.py</li>
-<li>states.py <code> class User(StatesGroup):
+<li>states.py</li></ul>
+
+```ruby
+class User(StatesGroup):
     name = State()
     surname = State()
     mail = State()
     login = State()
     password = State()
     phone = State()
-    fill_db = State()</code></li>
-</ul>
+    fill_db = State()
+```
+
 </li>
-<li>handlers</li>
+<li><b>handlers</b></li>
 <ul>
 <li>admin...py</li>
 <li>heicjpg.py</li>
@@ -33,41 +41,44 @@
 <li>bot_messages...py</li>
 <li>user_commands...py</li>
 </ul>
-<li>img</li>
-<li>keyboards
+<li><b>img</b></li>
+<li><b>keyboards</b>
 <ul>
 <li>fabrics.py</li>
 <li>inline.py</li>
 <li>reply.py</li>
 </ul>
 </li>
-<li>model
+<li><b>model</b>
 <ul>
 <li>IMAGIN</li>
 <li>modules</li>
 <li>veh_detec</li>
 </ul>
 </li>
-<li>pictures</li>
-<li>QR</li>
-
+<li><b>pictures</b></li>
+<li><b>QR</b></li>
 </ol>
-
-### Технологии
-#### Проект разработан с использованием:
+<h3 align="center">Технологии</h3>
+Проект разработан с использованием:
 <ul> 
 <li> aiogram для работы с Telegram API
 <li> io, pillow_heif для обработки изображений
 <li> sqlite3 для хранения данных пользователей
 <li> cv2, easyocr для распознавания объектов и текста на изображениях
 <li> torch, torchvision для моделей глубокого обучения
-<code>Фото хорошего разрешения
-Metadata: {'imageTakenTime': '2023:10:15 07:25:14', 'geolocation_lat: 59.8720555', 'geolocation_lng': 30.367008}
-['OPEL 0482001711670094 WOLOAHL6785065544 71870 K9 3145 170955 K9 220955 20R XXL0 8']</code>
 </ul>
 
-#### Логгирование работы
-<code>import sqlite3
+```ruby
+Фото хорошего разрешения
+Metadata: {'imageTakenTime': '2023:10:15 07:25:14', 'geolocation_lat: 59.8720555', 'geolocation_lng': 30.367008}
+['OPEL 0482001711670094 WOLOAHL6785065544 71870 K9 3145 170955 K9 220955 20R XXL0 8']
+```
+
+ <h3 align="center">Логгирование работы</h3>
+
+```ruby
+import sqlite3
 import binascii
 import os
 import hashlib
@@ -112,19 +123,27 @@ def insert_blob(photo):
     finally:
         if conn:
             print("Соединение с SQLite закрыто")
-</code>
+```
 
-### Машинное обучение
+<h2 align="center"> Машинное обучение</h2>
 
-### Установка и запуск
+<h3 align="center"> Установка и запуск</h3>
 Для запуска бота необходимо выполнить следующие шаги:
 
 <ol>
 <li> Зарегистрировать бота через <a href = 'https://t.me/BotFather'>@BotFather </a> в Telegram и получить уникальный токен. </li>
-<li> Вставить полученный токен в файл конфигурации ".env". 
-<code>#Put your token here BOT_TOKEN = ''</code>
+<li> Вставить полученный токен в файл конфигурации ".env". </li>
+
+```ruby
+#Put your token here BOT_TOKEN = ''
+```
+
+<li> Инициализация бота bot.py 
 </li>
-<li> Инициализация бота bot.py <code>import asyncio
+</ol>
+
+```ruby
+import asyncio
 import logging
 import sys
 
@@ -158,18 +177,20 @@ async def main():
 
 if name == 'main':
     logging.basicConfig(level = logging.INFO, stream = sys.stdout)
-    asyncio.run(main())</code> </li>
-</ol>
+    asyncio.run(main())
+``` 
 
 
 При первом запуске будет автоматически инициализирована база данных sqlite3.
 
 
-### Примеры использования
+<h3 align="center">Примеры использования</h3>
 Пользователи могут отправлять фотографии для осмотра через чат-бота. Бот автоматически определит наличие автомобиля, лобового стекла и VIN номера, предоставив соответствующую обратную связь и оценку.
-![alt text](image-2.png)
+<p align="center">
+  <img width="600" height="250" src="image-2.png">
+</p>
 
-### Как внести вклад
+<h3 align="center">Как внести вклад</h3>
 <ul>
 <li>Усовершенствование системы безопасности</li>
 <li>Расширение функционала чат-бота</li>
@@ -177,8 +198,9 @@ if name == 'main':
 </ul>
 Мы открыты к предложениям по расширению функционала, особенно в области Machine Learning для адаптации бота к осмотру загородных домов. Для внесения предложений, пожалуйста, свяжитесь с нами.
 
-### Контакты
+<h3 align="center">Контакты</h3>
 Если у вас есть вопросы или предложения, свяжитесь с нами:
 
-Telegram: @mishantique
+Telegram: [@mishantique](https://t.me/mishantique)
+
 Email: michvitko@mail.ru
