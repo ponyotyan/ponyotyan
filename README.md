@@ -1,4 +1,7 @@
 <h1 align="center">Hi, I'm Anastasia ✨ </h1>
+<p align="center">
+  <img width="600" height="350" src="_.gif">
+</p>
 
 <h3 align="center"> I am a business analyst/project manager from Saint Petersburg, Russia</h3>
 
@@ -9,7 +12,6 @@
  💫 How to reach me: lissmirr@mail.ru
 
 
-
 <h3 align="center"> 🏆 Achievements:</h3>
 <p align="center">
    Competition background:
@@ -17,6 +19,7 @@
     <li> DataWagon Hackaton 2023</li>
     <li> Sovcombank Challenge 2023</li>
   </ul>
+
 <h3 align="center"> 👩‍🎓 Education:</h3>
 <p align="left">
   <ul>
