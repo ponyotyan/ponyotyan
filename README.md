@@ -16,6 +16,7 @@
 <p align="center">
    Competition background:
   <ul>
+    <li> ML TALENTMATCH 2024</li>
     <li> DataWagon Hackaton 2023</li>
     <li> Sovcombank Challenge 2023</li>
   </ul>
